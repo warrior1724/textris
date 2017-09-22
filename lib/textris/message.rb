@@ -1,7 +1,7 @@
 module Textris
   class Message
     attr_reader :content, :from_name, :from_phone, :to, :texter, :action, :args,
-      :media_urls
+      :media_urls, :params
 
     def initialize(options = {})
       initialize_content(options)
@@ -12,6 +12,7 @@ module Textris
       @action     = options[:action]
       @args       = options[:args]
       @media_urls = options[:media_urls]
+      @params     = options[:params]
     end
 
     def deliver

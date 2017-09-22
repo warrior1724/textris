@@ -65,7 +65,8 @@ module Textris
         :action     => @action,
         :args       => @args,
         :content    => options[:body].is_a?(String) ? options[:body] : nil,
-        :renderer   => self)
+        :renderer   => self,
+        :params   => options[:params])
 
       ::Textris::Message.new(options)
     end
